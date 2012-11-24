@@ -1,0 +1,36 @@
+
+response = open("https://graph.facebook.com/me?access_token=#{token}").read
+
+<!-- Sample output
+
+["id", "551920983"]
+
+["name", "Bernard Chan"]
+
+["first_name", "Bernard"]
+
+["last_name", "Chan"]
+
+["link", "http://www.facebook.com/bernard.chan.90"]
+
+["username", "bernard.chan.90"]
+
+["hometown", {"id"=>"113317605345751", "name"=>"Hong Kong"}]
+
+["location", {"id"=>"113317605345751", "name"=>"Hong Kong"}]
+
+["work", [{"employer"=>{"id"=>"7040724713", "name"=>"Yahoo!"}, "position"=>{"id"=>"104378759649063", "name"=>"Head of Platform and Marketplace"}}, {"employer"=>{"id"=>"107869625902974", "name"=>"Bain & Company"}, "position"=>{"id"=>"112088245473437", "name"=>"Consultant"}, "start_date"=>"2006-01", "end_date"=>"2007-01"}, {"employer"=>{"id"=>"110046339023158", "name"=>"Applied Micro Circuits, Co."}, "position"=>{"id"=>"149016328442104", "name"=>"Hardware Engineer"}, "start_date"=>"2000-01", "end_date"=>"2004-01"}, {"employer"=>{"id"=>"122741211069921", "name"=>"야후코리아"}}, {"employer"=>{"id"=>"105668869468838", "name"=>"Applied Micro Circuit Corp."}}]]
+
+["education", [{"school"=>{"id"=>"105566562810014", "name"=>"Chan Sui Ki (La Salle) College"}, "type"=>"High School"}, {"school"=>{"id"=>"109415529078129", "name"=>"St. George's School"}, "type"=>"High School"}, {"school"=>{"id"=>"102095963164884", "name"=>"St. Georges"}, "type"=>"High School"}, {"school"=>{"id"=>"103773232995164", "name"=>"University of Waterloo"}, "year"=>{"id"=>"144503378895008", "name"=>"1999"}, "concentration"=>[{"id"=>"108180979203954", "name"=>"Economics"}, {"id"=>"106166156082069", "name"=>"Electrical Engineering"}], "type"=>"College"}, {"school"=>{"id"=>"126533127390327", "name"=>"Massachusetts Institute of Technology (MIT)"}, "degree"=>{"id"=>"196378900380313", "name"=>"MBA"}, "year"=>{"id"=>"137616982934053", "name"=>"2006"}, "concentration"=>[{"id"=>"100682300010492", "name"=>"Course 15 - Management"}], "type"=>"Graduate School"}, {"school"=>{"id"=>"115063238509482", "name"=>"MIT"}, "type"=>"Graduate School"}]]
+
+["gender", "male"]
+
+["timezone", -6]
+
+["locale", "en_US"]
+
+["verified", true]
+
+["updated_time", "2012-11-24T01:00:30+0000"]
+
+-->

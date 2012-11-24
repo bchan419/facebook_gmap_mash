@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<% redirect_url = "http://localhost:3000/auth/facebook" %>
+<% facebook_login_url = "https://www.facebook.com/dialog/oauth?client_id=#{FACEBOOK_APP_ID}&redirect_uri=#{redirect_url}&state=SOME_ARBITRARY_BUT_UNIQUE_STRING&scope=friends_location" %>
+
+<% if session[:facebook_connected] %>     
+	<p>Signed into Facebook</p>
+	
+<% else %>
+	<p><%= link_to "Connect to Facebook", facebook_login_url %></p>
+<% end %>
+
+</br>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<%= gmaps4rails(@json) %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
+</br>
+
+
+
